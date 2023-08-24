@@ -24,10 +24,12 @@ int partition(int *array, int s, int e, size_t size)
 			temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
-			print_array(array, size);
+			if (j != i)
+				print_array(array, size);
 		}
 	}
 	i++;
+
 	if (i != pivot_idx)
 	{
 		int temp;
