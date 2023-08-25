@@ -22,21 +22,8 @@ void insertion_sort_list(listint_t **list)
 	{
 		temp = curr->next;
 		sorted = curr->prev;
-		if (sorted == NULL || curr->n < sorted->n)
+		while (sorted != NULL)
 		{
-			if (sorted != NULL)
-			{
-				/*insert curr before sorted*/
-				swap(curr, sorted);
-				print_list(*list);
-
-			}
-			sorted = curr;
-			if (curr->prev == NULL)
-				*list = curr;
-			sorted = curr->prev;
-			while (sorted != NULL)
-			{
 				if (curr->n >= sorted->n)
 					break;
 				/*insert curr before sorted*/
@@ -45,7 +32,6 @@ void insertion_sort_list(listint_t **list)
 					*list = curr;
 				print_list(*list);
 				sorted = curr->prev;
-			}
 		}
 		curr = temp;
 	}
