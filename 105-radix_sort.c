@@ -80,9 +80,7 @@ int get_max(int *array, size_t size)
 {
 	int i;
 	int max = array[0];
-	
-	if (size <= 1)
-		return (-1);
+
 	for (i = 0; (size_t)i < size; i++)
 	{
 		if (array[i] > max)
