@@ -12,6 +12,8 @@ void radix_sort(int *array, size_t size)
 	int pos;
 	int max_val = get_max(array, size);
 
+	if (size <= 1)
+		return;
 	for (pos = 1; (max_val / pos) > 0; pos *= 10)
 	{
 		count_sort(array, size, pos);
@@ -78,7 +80,9 @@ int get_max(int *array, size_t size)
 {
 	int i;
 	int max = array[0];
-
+	
+	if (size <= 1)
+		return (-1);
 	for (i = 0; (size_t)i < size; i++)
 	{
 		if (array[i] > max)
