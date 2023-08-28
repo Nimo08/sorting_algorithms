@@ -12,8 +12,6 @@ void insertion_sort_card(deck_node_t **list, int value);
 void sort_deck(deck_node_t **deck)
 {
 	insertion_sort_kind(deck);
-	print_deck(*deck);
-	printf("\n");
 	insertion_sort_card(deck, 0);
 
 }
