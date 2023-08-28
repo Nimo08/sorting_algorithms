@@ -32,7 +32,7 @@ void count_sort(int *array, size_t size, size_t pos)
 	size_t i, max = 0;
 	int *count, *array_2, range;
 
-	if (size <= 1)
+	if (size <= 1 || pos == 0)
 		return;
 	for (i = 0; i < size; i++)
 	{
