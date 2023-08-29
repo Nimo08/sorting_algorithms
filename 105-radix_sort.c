@@ -29,7 +29,7 @@ void radix_sort(int *array, size_t size)
  */
 void count_sort(int *array, size_t size, size_t pos)
 {
-	size_t i, max = 0;
+	size_t i;
 	int *count, *array_2;
 
 	if (size <= 1 || pos == 0)
