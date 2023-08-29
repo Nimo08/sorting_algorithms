@@ -71,10 +71,11 @@ void count_sort(int *array, size_t size, size_t pos)
 int get_max(int *array, size_t size)
 {
 	int i;
-	int max = array[0];
+	int max;
 
 	if (size <= 0)
 		return (0);
+	max = array[0];
 	for (i = 0; (size_t)i < size; i++)
 	{
 		if (array[i] > max)
