@@ -34,14 +34,7 @@ void count_sort(int *array, size_t size, size_t pos)
 
 	if (size <= 1 || pos == 0)
 		return;
-	for (i = 0; i < size; i++)
-	{
-		if ((size_t)array[i] > max)
-		{
-			max = array[i];
-		}
-	}
-	count = malloc((max + 1) * sizeof(int));
+	count = malloc((10) * sizeof(int));
 	if (count == NULL)
 		return;
 	array_2 = malloc(size * sizeof(int));
@@ -50,13 +43,13 @@ void count_sort(int *array, size_t size, size_t pos)
 		free(count);
 		return;
 	}
-	for (i = 0; i < max + 1; i++)
+	for (i = 0; i < 10; i++)
 		count[i] = 0;
 	for (i = 0; i < size; i++)
 	{
 		++count[array[i] / pos % 10];
 	}
-	for (i = 1; i < max + 1; i++)
+	for (i = 1; i < 10; i++)
 		count[i] = count[i] + count[i - 1];
 	for (i = size - 1; (int)i >= 0; i--)
 	{
