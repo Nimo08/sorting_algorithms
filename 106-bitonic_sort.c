@@ -80,7 +80,7 @@ void bitonicSort(int *array, int lowIDx, int count, int direction, int s)
 		printf("%d", array[i]);
 		flag = 1;
 	}
-    printf("\n");
+	printf("\n");
 }
 /**
 * bitonic_sort - Entry point
